@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if [ -f $1/bb.edn ]; then
+    echo "Babashka" && exit 0
+else
+    (>&2 echo "Could not find a 'bb.edn' file!")
+    exit 0
+fi
+
+# Local Variables:
+# mode: bash-ts
+# End:
